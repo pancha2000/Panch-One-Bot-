@@ -1,9 +1,9 @@
-const {readEnv} = require('../lib/database')
+const {readEnv} =require('../lib/database')
 const {cmd , commands} = require('../command')
 
 cmd({
     pattern: "menu",
-    desc: "get cmd list",
+    desc: "bot commands menu.",
     category: "main",
     filename: __filename
 },
@@ -16,45 +16,46 @@ download: '',
 group: '',
 owner: '',
 convert: '',
-search:''
+search: '',
 };
 
 for (let i = 0; i < commands.length; i++) {
 if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `.${config.PREFIX}${commands[i].pattern}\n`;
+menu[commands[i].category] += `${config.PREFIX}{commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = `☠️ *Hello ${pushname}* 💖
-> *DOWNLOAD COMMANDS* 😈
+let madeMenu = `👋💙*Hello ${pushnamezzQ1habA}*
+> *DOWNLOAD COMMANDS*↕
 
 ${menu.download}
 
-> *MAIN COMMANDS* 😉
+> *MAIN COMMANDS🌟*
 
 ${menu.main}
 
-> *GROUP COMANDS* 💥
+> *GROUP COMMANDS🗃️*
 
 ${menu.group}
 
-> *OWNER COMMANDS* ☠️
+> *OWNER COMMANDS🛜* 
 
 ${menu.owner}
 
-> *CONVERT COMMANDS* 🔥
+> *CONVERT COMMANDS♻️*
 
 ${menu.convert}
 
-> *SEARCH COMMANDS* ⭐
+> *SEARCH COMMANDS🌐*
 
 ${menu.search}
 
-👋 *POWERD BY real@pancha WHATSAPP BOT* ✅
+POWER BY Pancha 💚
 `
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
-
+await conn.sendMassage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
+    
 }catch(e){
 console.log(e)
 reply(`${e}`)
+}
 })
