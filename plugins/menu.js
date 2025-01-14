@@ -25,7 +25,7 @@ menu[commands[i].category] += `${config.PREFIX}{commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = `👋💙*Hello ${pushnamezzQ1habA}*
+let madeMenu = `👋💙*Hello ${pushname}*
 > *DOWNLOAD COMMANDS*↕
 
 ${menu.download}
@@ -52,7 +52,7 @@ ${menu.search}
 
 POWER BY Pancha 💚
 `
-await conn.sendMassage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
+await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/0aa53d084024368c3bf14.jpg"},caption:madeSetting},{quoted:mek})
     
 }catch(e){
 console.log(e)
