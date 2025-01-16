@@ -1,5 +1,5 @@
 const {cmd , commands} = require('../command')
-const fg = require('api-dylux')
+const fg = require('youtubedl-core')
 const yts = require('yt-search')
 
 cmd({
@@ -71,7 +71,7 @@ let des = `*⭐ ៚⎈ᴘᴀͬɴͤᴄͣʜᷞᴀོᴼᴺᴱོʙᴏᴛ☬𝜈�
 
 🪐 AGO - ${data.ago}
 
-MADE BY SADIYA-MD
+MADE BY Pancha
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:des},{quoted:mek});
 
